@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Front Page</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            padding: 30px;
+        }
+        .logo {
+            width: 200px;
+            margin: 20px auto;
+        }
+        .heading {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        .lab-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+        .meta {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            padding: 0 60px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>KCC Institute Of Technology and Management</h2>
+        <h3>Department of Computer Science and Engineering</h3>
+        <img class="logo" src="data:image/png;base64,<%= logoBase64 %>" alt="Logo" />
+        <div class="lab-title"><%= subject.replaceAll("_", " ").toUpperCase() %> LAB</div>
+        <div class="meta">
+            Lab File :- <%= subjectCode %><br>
+            Session - 2024-25
+        </div>
+        <div class="footer">
+            <div>
+                Submitted to:<br>
+                <%= professor %><br>
+                (Assistant Professor)
+            </div>
+            <div>
+                Submitted by:<br>
+                Name: <%= name %><br>
+                Branch – <%= branch %><br>
+                Roll No. <%= roll %>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
