@@ -17,7 +17,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/generate', form, {
+      const response = await axios.post('https://practical-file-gen-backend.onrender.com/generate', form, {
         responseType: 'blob'
       });
       const url = window.URL.createObjectURL(new Blob([response.data]));
